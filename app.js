@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/places", require("./routes/api/places"));
+app.use("/api/auth", require("./routes/api/auth"));
 
 // Invalid Route
 app.use((req, res, next) =>
