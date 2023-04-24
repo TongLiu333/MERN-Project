@@ -4,6 +4,7 @@ const config = require("config");
 module.exports = connect = async () => {
     try {
         // connect
+        mongoose.set("strictQuery", false);
         await mongoose.connect(config.get("mongo-url"));
         console.log("MongoDB connected...");
     } catch (error) {
